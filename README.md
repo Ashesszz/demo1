@@ -8,3 +8,5 @@ Sql：MySQL8.0.26 + Mybatis-Plus
 IDE：IDEA 社区版 2019.3
 
 demo做的比较简单，就只有对一张数据表的增删查改4个功能
+
+# 前端代码→https://github.com/Ashesszz/demo1-Web.git
