@@ -31,6 +31,10 @@ public class ShowController {
     @GetMapping("/findAll/{current}/{size}")
     public IPage<User> findAll(@PathVariable("current") Integer current, @PathVariable("size") Integer size) {
         Page<User> page = new Page<>(current, size);
+        IPage<User> iPage = userService.findAll(page);
+        if (iPage.getRecords().size() == 0) {
+            page.setCurrent(current - 1);
+        }
         return userService.findAll(page);
     }
 
